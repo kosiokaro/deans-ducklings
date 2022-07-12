@@ -37353,7 +37353,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-menu-1 {
-  margin: -42px 0 45px auto;
+  margin: -42px -2px 45px auto;
 }
 
 .u-header .u-nav-1 {
@@ -37377,7 +37377,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-header .u-menu-1 {
     width: auto;
-    margin-right: 0;
+    margin-right: -2px;
   }
 
   .u-header .u-nav-1 {

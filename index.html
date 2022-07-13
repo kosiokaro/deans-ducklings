@@ -85,9 +85,10 @@
                   <div class="u-container-style u-layout-cell u-radius-20 u-right-cell u-shape-round u-size-60 u-white u-layout-cell-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-direction="Left" data-animation-delay="250">
                     <div class="u-container-layout u-container-layout-1">
                       <img class="u-image u-image-round u-radius-20 u-image-1" src="images/old-man.png" alt="" data-image-width="512" data-image-height="512" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-direction="Left" data-animation-delay="250">
-                      <h1 class="u-align-center u-text u-text-default u-text-1"> The <span style="font-size: 3rem;">
+                      <h1 class="u-align-center u-text u-text-default u-text-1" id="isIn?"><span style="font-size: 3rem;">
                           <span style="font-size: 4.5rem;"></span>
-                        </span>Dean is in!
+                        </span>
+                        <object data="in-out.txt"></object>
                       </h1>
                       <a href="Queue.html" data-page-id="904422160" class="u-border-none u-btn u-btn-round u-button-style u-palette-3-base u-radius-10 u-text-palette-1-base u-btn-1" data-animation-name="rollIn" data-animation-duration="1000" data-animation-direction="" data-animation-delay="500">Queue UP!</a>
                     </div>
@@ -149,4 +150,7 @@
       </a>. 
     </section>
   
+    <script>
+      document.getElementById("isIn?").innerHTML = "The Dean is OUT!";
+    </script>
 </body></html>

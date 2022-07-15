@@ -9,23 +9,32 @@ var seven = document.getElementById("Student7");
 var eight = document.getElementById("Student8");
 var nine = document.getElementById("Student9");
 var ten = document.getElementById("Student10");
+var form_submit = document.getElementById("form_submit");
+var leave_button = document.getElementById("leave_button");
+
 
 function get_num_in_queue() {
 	return num_in_queue;
 }
 
 function increment_queue() {
+	console.log("increment");
 	num_in_queue += 1;
 	initialize_queue();
+	form_submit.style.display = "none";
+	leave_button.style.display = "block";
 }
 
 function decrement_queue() {
+	console.log("decrement");
 	num_in_queue -= 1;
 	initialize_queue();
+	leave_button.style.display = "none";
+	form_submit.style.display = "block";
 }
 
 function initialize_queue() {
-	console.log("hello");
+	leave_button.style.display = "none";
 	one.style.visibility = "hidden";
 	two.style.visibility = "hidden";
 	three.style.visibility = "hidden";

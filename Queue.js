@@ -1,4 +1,4 @@
-var num_in_queue = 3;
+var num_in_queue = 2;
 var one = document.getElementById("Student1");
 var two = document.getElementById("Student2");
 var three = document.getElementById("Student3");

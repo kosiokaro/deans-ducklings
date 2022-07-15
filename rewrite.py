@@ -44,7 +44,7 @@ while True:
     # print(result)
     # board.digital[1].write(1)
     board.digital[2].write(1)
-    board.digital[3].write(1)
+    # board.digital[3].write(1)
 
     if keyboard.is_pressed("a"):
         fourth = True
@@ -53,9 +53,9 @@ while True:
         fourth = False
 
     if fourth:
-        board.digital[4].write(1)
+        board.digital[3].write(1)
     else:  
-        board.digital[4].write(0)
+        board.digital[3].write(0)
 
     sw = board.digital[10].read()
     if sw:

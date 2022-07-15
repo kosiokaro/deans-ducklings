@@ -10,6 +10,10 @@ var eight = document.getElementById("Student8");
 var nine = document.getElementById("Student9");
 var ten = document.getElementById("Student10");
 
+function get_num_in_queue() {
+	return num_in_queue;
+}
+
 function increment_queue() {
 	num_in_queue += 1;
 	initialize_queue();

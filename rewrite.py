@@ -1,6 +1,9 @@
 import pyfirmata
 import time
 import keyboard
+import js2py
+
+result, queuefile = js2py.run_file("Queue.js");
 
 board = pyfirmata.Arduino('COM3')
 
@@ -30,6 +33,9 @@ f.write(out_content)
 f.close()
 
 while True:
+    result = queuefile.get_num_in_queue()
+    print(result)
+
     sw = board.digital[10].read()
     if sw:
         button_pressed = True
@@ -55,4 +61,3 @@ while True:
         isIn = not isIn
         keyboard.press_and_release('ctrl + r')
         on = not on
-

@@ -1,9 +1,14 @@
 import pyfirmata
 import time
 import keyboard
-import js2py
+# import js2py
 
-result, queuefile = js2py.run_file("Queue.js");
+# result, queuefile = js2py.run_file("Queue.js");
+# result, tempfile = js2py.run_file("hello.js");
+
+# result= tempfile.sayHello();
+# print(result)
+
 
 board = pyfirmata.Arduino('COM3')
 
@@ -32,9 +37,25 @@ f = open("index.html", "w")
 f.write(out_content)
 f.close()
 
+fourth = False
+
 while True:
-    result = queuefile.get_num_in_queue()
-    print(result)
+    # result = queuefile.get_num_in_queue()
+    # print(result)
+    # board.digital[1].write(1)
+    board.digital[2].write(1)
+    board.digital[3].write(1)
+
+    if keyboard.is_pressed("a"):
+        fourth = True
+
+    if keyboard.is_pressed("s"):
+        fourth = False
+
+    if fourth:
+        board.digital[4].write(1)
+    else:  
+        board.digital[4].write(0)
 
     sw = board.digital[10].read()
     if sw:
